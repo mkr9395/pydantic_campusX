@@ -1,5 +1,5 @@
-from pydantic import BaseModel, EmailStr, AnyUrl, Field, field_validator
-from typing import Optional, Annotated
+from pydantic import BaseModel, EmailStr, field_validator
+
 
 class Patient(BaseModel):
 
