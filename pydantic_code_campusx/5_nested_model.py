@@ -1,5 +1,15 @@
 # use one model inside another model as a field
 
+"""
+# Better organization of related data (e.g., vitals, address, insurance)
+
+# Reusability: Use Vitals in multiple models (e.g., Patient, MedicalRecord)
+
+# Readability: Easier for developers and API consumers to understand
+
+# Validation: Nested models are validated automatically—no extra work needed
+"""
+
 from pydantic import BaseModel
 
 class Address(BaseModel): #seprately creating all components of an address
@@ -24,6 +34,15 @@ patient_dict = {'name': 'nitish', 'gender': 'male', 'age': 35, 'address': addres
 
 patient1 = Patient(**patient_dict)
 
-temp = patient1.model_dump(include=)
+print(patient1.address.city)
+print(patient1.address.state)
 
-print(type(temp))
+
+print(patient1)
+
+
+
+
+# temp = patient1.model_dump(include=)
+
+# print(type(temp))
