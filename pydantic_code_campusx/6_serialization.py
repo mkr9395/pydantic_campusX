@@ -32,16 +32,16 @@ print(temp)
 print(type(temp))
 
 # if you only want to export name to python dict
-temp = patient1.model_dump(include=['name'])
+temp = patient1.model_dump(include=['name']) # type: ignore
 print(temp)
 print(type(temp))
 
 # want to only exclude address
-temp = patient1.model_dump(exclude=['address'])
+temp = patient1.model_dump(exclude=['address']) # type: ignore
 print(temp)
 print(type(temp))
 # exclude only city of address
-temp = patient1.model_dump(exclude={'address': ['state']})
+temp = patient1.model_dump(exclude={'address': ['state']}) # type: ignore
 print(temp)
 print(type(temp))
 
